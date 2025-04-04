@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #0e100f;
+}
+
+table{
+    background-color: transparent !important;
+    width: 50%;
+}
+
+.t-heading{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.1rem;
+}
+
+.t-body{
+    text-align: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-one,
+.grid-two{
+    
+    padding: 2rem;
+}
+
+.grid-one input,
+.grid-one span,
+.grid-two select{
+    margin: 2rem 0rem;
+}
+
+.add-page-btn{
+    margin-top:5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+
+/* navigation */
+
+.gsap-nav{
+    background-color: #0e100f;
+}
+
+.logo{
+    color: #FFFCE1;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.logo:hover,
+.logo:focus{
+    color: green;
+}
+
+.links{
+    color: #525253;
+    font-size: 1.2rem;
+    transition: all ease-in-out 0.5s;
+}
+
+.links:hover{
+    color: #FFFCE1;
+    font-weight: 500;
+    
+}
+
+/* form fields */
+
+input[type="text"],
+input[type="email"],
+input[type="tele"],
+select option {
+    border: solid #FFFCE1 2px;  /* Border color */
+    background-color: #0e100f;  /* Dark background */
+    color: #FFF;  /* White text for better contrast */
+     padding: 8px 12px;  /* Adds some padding inside the input field */
+    font-size: 16px;  /* Makes the text easier to read */
+}
+
+input:focus {
+    border-color: #FFDD00;  /* Change border color on focus for visibility */
+    outline: none;  /* Remove default outline for better control */
+    background-color: #222;  /* Slightly lighter background on focus */
+}
+
+input::placeholder{
+    color: #FFFCE1;
+}
+
+
