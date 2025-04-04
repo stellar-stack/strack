@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom'
 const Home = () => {
 
     const [students, setStudent] = useState([])
+    const [search, setSearch] = useState('')
+
+    console.log(search)
 
     useEffect(() => {
         loadAllStudent();
@@ -24,6 +27,21 @@ const Home = () => {
     return (
 
         <div>
+
+            <div className='search'>
+                <form className="d-flex" role="search">
+                    <span class="search-icon material-symbols-outlined">
+                        search
+                    </span>                    
+                    <input className="form-control me-2 search-input" type="search" placeholder="OX1999"
+                        aria-label="Search"
+                        onChange={(e) => setSearch(e.target.value)} />
+
+                </form>
+            </div>
+
+
+
             <table className="table border shadow table-striped table-hover table-bordered border-success table-dark table-sm align-middle table-responsive">
                 <thead className='t-heading table'>
                     <tr className='t-head-row'>
@@ -41,7 +59,11 @@ const Home = () => {
                 <tbody className='t-body my-2 mx-2'>
 
                     {
-                        students.map((student, index) => {
+                        students.filter((item) => {
+                            return search.toLowerCase() === '' ?
+                                item :
+                                item.studentId.toLowerCase().includes(search)
+                        }).map((student, index) => {
 
                             return (
                                 <tr className='my-2 mx-2' key={student.id}>
