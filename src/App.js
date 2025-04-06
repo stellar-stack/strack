@@ -10,6 +10,7 @@ import Result from './pages/Results';
 import Viewresult from './users/Viewresult';
 import Editresult from './users/Editresult';
 import Addresult from './users/Addresult';
+import LandingPage from './pages/Landing';
 
 function App() {
   return (
@@ -18,10 +19,11 @@ function App() {
     <Navbar />
 
     <Routes>
+      <Route exact path='/' element={<LandingPage/>}/>
       <Route exact path='/home' element={<Home />}/>
       <Route exact path='/adduser' element={<Adduser />}/>
-      <Route exact path='/edituser/:id' element={<Edituser />}/>
-      <Route exact path='/viewuser/:id' element={<Viewuser />}/>
+      <Route exact path='/home/edituser/:id' element={<Edituser />}/>
+      <Route exact path='/home/viewuser/:id' element={<Viewuser />}/>
 
       <Route exact path='/result' element={<Result />}></Route>
       <Route exact path='/result/addresult' element={<Addresult />}></Route>

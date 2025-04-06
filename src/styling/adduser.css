@@ -1,0 +1,77 @@
+.adduser-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  
+  .f-orm {
+    width: 100%;
+    max-width: 950px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .input-group,
+  .form-select {
+    margin-bottom: 25px;
+  }
+  
+  .input-group:focus-within,
+  .form-select:focus {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+  }
+  
+  .add-page-btn {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 5rem;
+  }
+  
+  .add-page-btn .btn {
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .add-page-btn .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  
+
+  .confetti-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* make sure it doesn’t block clicks */
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .confetti-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  

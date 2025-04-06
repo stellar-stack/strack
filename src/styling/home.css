@@ -54,6 +54,10 @@ table {
 
 .gsap-nav {
     background-color: #0e100f;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
@@ -144,7 +148,7 @@ input::placeholder {
     font-size: 16px;
     font-family: sans-serif;
 
-    color: #333333 !important;
+    color: #e7dfdf !important;
     margin-left: var(--paddin);
     outline: none;
     border: none;
@@ -162,3 +166,173 @@ input::placeholder {
     font-size: 1.2rem;
 
 }
+
+
+
+/* navbar styling */
+/* Home.css */
+
+/* Sticky Navbar */
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    opacity: 0; /* Start invisible */
+  }
+  
+  /* Navbar Background */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent dark background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    padding: 0rem 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover Effects for Navbar Links */
+  .navbar-nav .nav-item .links {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar-nav .nav-item .links:hover {
+    color: #FFB84D; /* Golden color on hover */
+    transform: scale(1.1); /* Zoom effect */
+    text-shadow: 0 0 10px rgba(255, 184, 77, 0.5); /* Text glow effect */
+  }
+  
+  /* Navbar Brand (Logo) Styling */
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Prevent animation from spilling out of container */
+    padding: 10px 20px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  /* Hover animation for logo */
+  .logo:hover {
+    transform: scale(1.2) rotate(10deg); /* Logo zoom effect and rotate slightly */
+    color: #FFB84D; /* Golden color change */
+    text-shadow: 0 0 20px rgba(255, 184, 77, 0.8); /* Glowing effect */
+    box-shadow: 0 0 15px rgba(255, 184, 77, 0.6); /* Add outer shadow on hover */
+    cursor: pointer;
+  }
+  
+  /* Flower Shapes / Animated Objects around the logo */
+  .shape {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFB84D;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .shape:nth-child(1) { animation-delay: 0.1s; }
+  .shape:nth-child(2) { animation-delay: 0.2s; }
+  .shape:nth-child(3) { animation-delay: 0.3s; }
+  .shape:nth-child(4) { animation-delay: 0.4s; }
+  .shape:nth-child(5) { animation-delay: 0.5s; }
+  .shape:nth-child(6) { animation-delay: 0.6s; }
+
+  
+  /* HOME */
+  /* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #343a40; /* Adjust according to theme */
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the table wrapper to enable vertical scroll */
+.table-wrapper {
+    max-height: 400px; /* Set a fixed height for the table content */
+    overflow-y: auto;  /* Enable vertical scroll */
+    overflow-x: hidden; /* Hide horizontal scroll (optional) */
+    position: relative;
+    background-color: transparent; /* No background color */
+}
+
+/* Custom Scrollbar Styling */
+.table-wrapper::-webkit-scrollbar {
+    width: 8px; /* Set scrollbar width */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Row hover effect */
+.student-row:hover {
+    background-color: #444;
+    color: white; /* Text color on hover */
+}
+
+/* Search bar styling */
+.search {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.search-icon {
+    font-size: 22px;
+}
+
+/* Table Styling */
+table {
+    width: 100%; /* Ensure the table fills the container width */
+    min-width: 800px; /* Ensure the table is wide enough to need horizontal scrolling */
+    border-collapse: collapse;
+    background-color: transparent; /* No background behind the table */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional: shadow for table */
+}
+
+/* Table Cell Styling */
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* th {
+    background-color: #FFB84D; Header background color
+    color: white;
+} */
+
+/* tr:nth-child(even) {
+    background-color: #f2f2f2;
+ } */
+
+/* tr:hover {
+    background-color: #e2e2e2;
+}   */
+
+
+/* result table update*/
+
+
