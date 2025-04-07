@@ -1,0 +1,87 @@
+.view-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #a1c4fd; /* Light blue gradient */
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .user-card {
+    background: #2c2c2e;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .user-info h2 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .user-info .role {
+    font-size: 1rem;
+    color: #aaa;
+    margin-top: 0.2rem;
+  }
+  
+  .user-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    background: #3a3a3c;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .stat-box {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+  
+  .value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.3rem;
+  }
+  
+  .extra-details {
+    margin-top: 1rem;
+  }
+  
+  .extra-details p {
+    margin: 0.4rem 0;
+  }
+  
+  .user-actions {
+    text-align: right;
+    margin-top: 1.5rem;
+  }
+  
+  .btn-outline {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 0 10px #007bff;
+  }
+  

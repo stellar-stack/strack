@@ -1,0 +1,15 @@
+.form-animated {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  form:hover {
+    animation: floatCard 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatCard {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+  

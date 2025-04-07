@@ -29,7 +29,6 @@ const Adduser = () => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:8080/api/student', adduser);
-
       toast.success('🎉 User added successfully!', {
         position: "top-right",
         autoClose: 2000
@@ -76,18 +75,18 @@ const Adduser = () => {
   }, []);
 
   const inputFields = [
-    { label: "Student Id", name: "studentId", type: "text", placeholder: "IU2380820279" },
-    { label: "First Name", name: "firstname", type: "text" },
-    { label: "Last Name", name: "lastname", type: "text" },
-    { label: "Email", name: "email", type: "email", placeholder: "@gmail.com" },
-    { label: "Phone", name: "phone", type: "tel", placeholder: "0300..." }
+    { label: "Student ID", name: "studentId", type: "text", placeholder: "IU2380820279", maxLength: 15 },
+    { label: "First Name", name: "firstname", type: "text", placeholder: "e.g. John", maxLength: 20 },
+    { label: "Last Name", name: "lastname", type: "text", placeholder: "e.g. Doe", maxLength: 20 },
+    { label: "Email", name: "email", type: "email", placeholder: "e.g. john@example.com", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$" },
+    { label: "Phone", name: "phone", type: "tel", placeholder: "e.g. 03001234567", pattern: "[0-9]{11}", maxLength: 11 }
   ];
 
   return (
-    <div className="min-vh-100 d-flex align-items-center justify-content-center bg-dark text-white px-4 py-5">
+    <div className="min-vh-100 d-flex align-items-center justify-content-center px-4 py-5 custom-bg">
       <form
         ref={formRef}
-        className="bg-secondary p-5 rounded-4 shadow-lg w-100"
+        className="bg-secondary p-5 rounded-4 shadow-lg w-100 border border-light"
         onSubmit={onSubmit}
         style={{ maxWidth: "850px" }}
       >
@@ -96,15 +95,17 @@ const Adduser = () => {
           <div className="col-md-6">
             {inputFields.map((field, i) => (
               <div className="mb-3" key={field.name} ref={el => inputRefs.current[i] = el}>
-                <label className="form-label fw-semibold text-light">{field.label}</label>
+                <label className="form-label fw-semibold text-light-emphasis">{field.label}</label>
                 <input
                   type={field.type}
                   className="form-control bg-dark text-white border-light"
                   name={field.name}
-                  placeholder={field.placeholder || ""}
+                  placeholder={field.placeholder}
                   value={adduser[field.name]}
                   onChange={onInputChange}
                   required
+                  maxLength={field.maxLength || undefined}
+                  pattern={field.pattern || undefined}
                   onFocus={(e) => gsap.to(e.target, { scale: 1.03, duration: 0.2 })}
                   onBlur={(e) => gsap.to(e.target, { scale: 1, duration: 0.2 })}
                 />
@@ -114,7 +115,7 @@ const Adduser = () => {
 
           <div className="col-md-6 d-flex flex-column justify-content-between">
             <div className="mb-3" ref={el => inputRefs.current[5] = el}>
-              <label className="form-label fw-semibold text-light">Department</label>
+              <label className="form-label fw-semibold text-light-emphasis">Department</label>
               <select
                 className="form-select bg-dark text-white border-light"
                 name="department"
@@ -130,7 +131,7 @@ const Adduser = () => {
             </div>
 
             <div className="mb-3" ref={el => inputRefs.current[6] = el}>
-              <label className="form-label fw-semibold text-light">Course</label>
+              <label className="form-label fw-semibold text-light-emphasis">Course</label>
               <select
                 className="form-select bg-dark text-white border-light"
                 name="course"
@@ -168,6 +169,18 @@ const Adduser = () => {
       </form>
 
       <ToastContainer />
+      <style>
+        {`
+          .custom-bg {
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .text-light-emphasis {
+            color: rgba(255, 255, 255, 0.85);
+          }
+        `}
+      </style>
     </div>
   );
 };

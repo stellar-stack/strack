@@ -1,0 +1,99 @@
+/* Edituser.css */
+.edituser-dark {
+    background-color: #1e1e2f;
+    color: #fff;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .edituser-form {
+    background-color: #2a2a40;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .edituser-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .avatar-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .avatar-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #444;
+  }
+  
+  .email-text {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.5rem;
+    color: #ddd;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #3a3a55;
+    color: #fff;
+  }
+  
+  .form-group input::placeholder {
+    color: #999;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .btn-primary {
+    background-color: #4e8ef7;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    background-color: #f44336;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    opacity: 0.9;
+  }
+  

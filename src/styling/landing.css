@@ -1,4 +1,4 @@
-.landing-container {
+ .landing-container {
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)),
                 url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
     height: 100vh;
@@ -48,8 +48,8 @@
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(255, 184, 77, 0.6);
   }
-  
-  /* Floating background words */
+   
+   /* Floating background words */
   .floating-words {
     position: absolute;
     top: 0;
@@ -75,4 +75,6 @@
   .floating-word:nth-child(3) { top: 50%; left: 40%; }
   .floating-word:nth-child(4) { top: 70%; left: 60%; }
   .floating-word:nth-child(5) { top: 85%; left: 20%; }
-  
+   
+
+   

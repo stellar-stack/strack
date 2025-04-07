@@ -55,8 +55,8 @@ const LandingPage = () => {
         <h1 className="landing-title">Student Result Management System</h1>
         <p className="landing-subtitle">Manage results efficiently and effortlessly</p>
         <div className="btn-group">
-          <Link to="/login" className="btn btn-primary">Admin Login</Link>
-          <Link to="/studentlogin" className="btn btn-outline-light">Student Login</Link>
+          <Link to="/home" className="btn btn-primary">Admin Login</Link>
+          <Link to="#" className="btn btn-outline-light">Student Login</Link>
         </div>
       </div>
     </div>
@@ -64,3 +64,5 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+
